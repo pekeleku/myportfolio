@@ -3,6 +3,7 @@ import Hero from "./parts/Hero";
 import Projects from "./parts/Projects";
 import Sitemap from "./parts/Sitemap";
 import Footer from "./parts/Footer";
+
 function App() {
   return (
     <>

@@ -8,6 +8,7 @@ export default function Header() {
   const [fixednav, setFixednav] = useState(false);
   const [header, setheader] = useState();
   // toogle hamburger menu change
+
   const updateMenu = () => {
     if (!ismenuClicked) {
       setHamburger("hamburger-active");
@@ -20,7 +21,6 @@ export default function Header() {
   };
 
   const navfixed = () => {
-    console.log(window.pageYOffset);
     // if (window.scrollY >= 10) {
     if (window.pageYOffset) {
       setFixednav(true);
@@ -38,7 +38,7 @@ export default function Header() {
       }
     >
       <div className="container">
-        <div className="flex items-center justify-between relative my-5">
+        <div className="flex items-center justify-between relative my-3">
           <div className="flex items-center">
             <button
               id="hamburger"

@@ -11,8 +11,15 @@ export default function Projects() {
             alt="p1"
             className="rounded-xl hover:object-center "
           />
+          <a
+            className="font-medium mt-2 p-2 hover:text-primary"
+            href="lacazacoffe.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Luxspace
+          </a>
 
-          <p className="font-medium mt-2 p-2">Luxspace</p>
           <div className="relative ">
             <p className="text-secondary font-light text-sm flex p-2 ">
               front end use reactJs
