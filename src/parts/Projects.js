@@ -13,7 +13,7 @@ export default function Projects() {
           />
           <a
             className="font-medium mt-2 p-2 hover:text-primary"
-            href="lacazacoffe.vercel.app"
+            href="https://lacazacoffe.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
