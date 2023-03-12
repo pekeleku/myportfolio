@@ -13,7 +13,7 @@ export default function Projects() {
           />
           <a
             className="font-medium mt-2 p-2 hover:text-primary"
-            href="https://lacazacoffe.vercel.app/"
+            href="https://luxspace-pwa-mu.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,7 +35,15 @@ export default function Projects() {
         <div className="w-full h-full my-8 md:mx-7 md:mt-[70px] hover:card transition duration-150 hover:translate-y-5">
           <img src="./img/projects/p2.PNG" alt="p1" className="rounded-xl" />
 
-          <p className="font-medium mt-2 p-2">LacazaCoffee</p>
+          <a
+            className="font-medium mt-2 p-2 hover:text-primary"
+            href="https://lacazacoffe.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lacaza Coffee
+          </a>
+
           <div className="relative">
             <p className="text-secondary font-light text-sm flex p-2">
               front end use reactJs
@@ -55,7 +63,15 @@ export default function Projects() {
             className="rounded-xl hover:object-center"
           />
 
-          <p className="font-medium mt-2 p-2">Staycation</p>
+          <a
+            className="font-medium mt-2 p-2 hover:text-primary"
+            href="https://luxspace-pwa-mu.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Staycation
+          </a>
+
           <div className="relative ">
             <p className="text-secondary font-light text-sm flex p-2">
               front end use reactJs
