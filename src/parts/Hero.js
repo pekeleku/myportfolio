@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 
 export default function Hero() {
@@ -5,50 +6,94 @@ export default function Hero() {
     <section className="container lg:mt-[100px]">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="order-last md:order-first">
-          <p className="text-black font-bold md:text-[40px] text-3xl mb-2">
+          <p className="text-black font-bold lg:text-[80px]  text-3xl leading-none lg:leading-[80px] mb-[8px]">
             Hai i'm Walter B.G Aluman
           </p>
-          <p className="text-secondary font-light md:font-normal mb-[15px]">
+          <p className="text-secondary text-[25px] font-light md:font-normal mb-[50px]">
             i am web developer, for now I am more focused on the front-end but
             do not rule out the back-end work
           </p>
-          <a
-            href="https://www.linkedin.com/in/walter-aluman/"
-            className="bg-btn p-3 rounded-2xl text-white mb-[15px] hover:shadow-lg font-semibold transform-none btn-hover"
-          >
-            Hire Me
-          </a>
-          <br />
-          <div className="flex mt-5">
-            <div className="w-auto bg-primary p-3 rounded-xl text-white mr-8 font-semibold hover:scale-75 btn-hover transform-none">
-              ReactJs
+          <div className=" flex w-[165px] h-[60px] bg-btn  rounded-2xl  justify-center items-center text-white  font-semibold my-6  lg:my-[50px]  ">
+            Hire me
+          </div>
+          {/* awal sosmed  */}
+          <div className="flex flex-row items-center">
+            <div className=" flex  w-[53px] h-[53px] mr-[45px]">
+              <a
+                rel="noopener noreferrer"
+                href="https://github.com/pekeleku"
+                target="_blank"
+              >
+                <img
+                  alt="img"
+                  className=" w-full h-full  "
+                  src="./img/link/github.png"
+                />
+              </a>
             </div>
-            <div className="bg-secondary p-3 rounded-xl text-black font-semibold btn-hover transform-none">
-              ExpressJs
+            <div className="mr-[45px] w-[53px] h-[53px]">
+              <a
+                rel="noopener noreferrer"
+                href="https://glints.com/id/profile"
+                target="_blank"
+              >
+                <img
+                  alt="img"
+                  className="w-full h-full"
+                  src="./img/link/glints.png"
+                />
+              </a>
+            </div>
+            <div className="mr-[45px] w-[53px] h-[53px]">
+              <a
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/walter-aluman/"
+                target="_blank"
+              >
+                <img
+                  alt="img"
+                  className="w-full h-full"
+                  src="./img/link/linkin.png"
+                />
+              </a>
+            </div>
+            <div className="mr-[45px] w-[53px] h-[53px]">
+              <a
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/wollly__/?next=%2F"
+                target="_blank"
+              >
+                <img
+                  alt="img"
+                  className="w-full h-full"
+                  src="./img/link/ig.png"
+                />
+              </a>
             </div>
           </div>
+          {/* akhir sosmed  */}
         </div>
-        <div className="flex flex-2"></div>
+
         <div className="flex md:w-1/2 my-[15px] items-center">
-          <div className="flex-5 w-[240px] h-[240px] md:w-full md:h-full">
+          <div className="flex-5 w-[556px] h-auto md:h-[446px]  ">
             <img
-              src="./img/walter.png"
+              src="./img/fix.JPG"
               alt="walter"
-              className="w-full h-full md:object-contain"
+              className="w-full h-full rounded-2xl"
             />
           </div>
           <div className="flex-1 relative">
             <div className="absolute -left-[50px] z-10 bottom-8">
               <div className="flex items-center w-full justify-center h-[28px] bg-secondary p-3 md:p-5 rounded-md md:hidden lg:flex">
                 <p className="text-xs lg:text-base font-medium text-black">
-                  always learn new things
+                  Ready to work
                 </p>
               </div>
             </div>
             <div className="absolute -left-[50px] top-8">
               <div className="flex items-center w-full justify-center h-[28px] bg-primary p-3 md:p-5 rounded-md md:hidden lg:flex">
                 <p className="text-xs md:text-base font-medium text-black">
-                  Student College
+                  Fresh Graduate
                 </p>
               </div>
             </div>

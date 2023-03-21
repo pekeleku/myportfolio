@@ -65,7 +65,7 @@ export default function Projects() {
 
           <a
             className="font-medium mt-2 p-2 hover:text-primary"
-            href="https://luxspace-pwa-mu.vercel.app/"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
           >
