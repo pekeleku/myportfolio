@@ -66,7 +66,7 @@ export default function Header() {
                 <li className="group">
                   <a
                     href="/"
-                    className="text-base text-dark py-2 flex justify-center group-hover:text-primary"
+                    className="text-base font-semibold text-dark py-2 flex justify-center group-hover:text-primary"
                   >
                     Portfolio
                   </a>
@@ -74,7 +74,7 @@ export default function Header() {
                 <li className="group">
                   <a
                     href="/"
-                    className="text-base text-dark py-2 mx-8 flex justify-center group-hover:text-primary"
+                    className="text-base font-semibold text-dark py-2 mx-8 flex justify-center group-hover:text-primary"
                   >
                     About Me
                   </a>
