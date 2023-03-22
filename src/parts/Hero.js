@@ -79,7 +79,7 @@ export default function Hero() {
             <img
               src="./img/fix.JPG"
               alt="walter"
-              className="w-full h-full rounded-2xl"
+              className="w-full  h-auto lg:h-full rounded-2xl"
             />
           </div>
           <div className="flex-1 relative">

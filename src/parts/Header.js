@@ -6,7 +6,7 @@ export default function Header() {
   const [ismenuClicked, setMenuClicked] = useState(false);
   const [isnav, setNav] = useState("#nav-menu hidden");
   const [fixednav, setFixednav] = useState(false);
-  const [header, setheader] = useState();
+
   // toogle hamburger menu change
 
   const updateMenu = () => {
@@ -84,7 +84,7 @@ export default function Header() {
           </div>
           <div className="w-[50px] h-[50px] py-2">
             <img
-              src="./img/icon/logo.svg"
+              src="./img/icon/favicon.ico"
               alt="logo"
               className="flex w-full h-full object-cover"
             />
