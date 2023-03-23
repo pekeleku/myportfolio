@@ -92,7 +92,7 @@ export default function Header() {
           <div className="flex">
             <a
               href="https://www.linkedin.com/in/walter-aluman/"
-              className="flex items-center justify-center w-[135px] h-[42px] font-medium bg-secondary p-3 rounded-[15px] hover:shadow-md btn-hover transform-none"
+              className="flex items-center justify-center w-auto h-auto md:w-[135px] md:h-[42px] font-medium bg-secondary p-3 rounded-[15px] hover:shadow-md hover:btn-hover transform-none"
             >
               Contact Me
             </a>
