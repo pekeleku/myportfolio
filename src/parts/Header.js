@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Header() {
+export default function Header(prop) {
   const [hamburger, setHamburger] = useState("hamburger");
   const [hamburger_line, setHamburgerLine] = useState("hamburger-line");
   const [ismenuClicked, setMenuClicked] = useState(false);
@@ -29,6 +29,13 @@ export default function Header() {
     }
   };
   window.addEventListener("scroll", navfixed);
+
+  function showMostPicked() {
+    window.scrollTo({
+      top: prop.refProject.current.offsetTop - 30,
+      behavior: "smooth",
+    });
+  }
   return (
     <header
       className={
@@ -67,6 +74,7 @@ export default function Header() {
                   <a
                     href="/"
                     className="text-base font-semibold text-dark py-2 flex justify-center group-hover:text-primary"
+                    onClick={showMostPicked}
                   >
                     Portfolio
                   </a>
@@ -92,7 +100,7 @@ export default function Header() {
           <div className="flex">
             <a
               href="https://www.linkedin.com/in/walter-aluman/"
-              className="flex items-center justify-center w-auto h-auto md:w-[135px] md:h-[42px] font-medium bg-secondary p-3 rounded-[15px] hover:shadow-md hover:btn-hover transform-none"
+              className="flex items-center justify-center w-auto h-auto md:w-[135px] md:h-[42px] font-medium bg-secondary p-3 rounded-[15px] hover:shadow-md  transform-none"
             >
               Contact Me
             </a>

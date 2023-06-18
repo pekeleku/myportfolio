@@ -30,6 +30,16 @@ export default function Advantage() {
               TaildwindCSS
             </p>
           </div>
+          <div className="w-[165px] h-[159px] p-[40px] bg-secondary rounded-[35px] mt-5 lg:mt-0 mr-0 md:mr-7">
+            <div className="flex  justify-center  ">
+              <img
+                src="./img/advantage/sass.png"
+                alt="img"
+                className=" -mt-2 "
+              />
+            </div>
+            <p className="flex justify-center font-medium ">Sass</p>
+          </div>
           <div className="w-[165px] h-[159px] p-[40px] bg-secondary rounded-[35px] mt-5 lg:mt-0 mr-0 ">
             <div className="flex  justify-center ">
               <img src="./img/advantage/express.png" alt="img" className="  " />

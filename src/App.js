@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "./parts/Header";
 import Hero from "./parts/Hero";
 import Projects from "./parts/Projects";
@@ -6,12 +7,18 @@ import Footer from "./parts/Footer";
 import Advantage from "./parts/Advantage";
 
 function App() {
+  const refProject = React.useRef();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <>
-      <Header />
+      <Header ref={refProject} />
       <Hero />
       <Advantage />
-      <Projects />
+      <Projects ref={refProject} />
       <Sitemap />
       <Footer />
     </>
