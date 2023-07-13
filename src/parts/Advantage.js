@@ -14,7 +14,11 @@ export default function Advantage() {
           </div>
           <div className="w-[165px] h-[159px] p-[40px] bg-secondary rounded-[35px] mt-5 lg:mt-0  mr-0 md:mr-7">
             <div className="flex  justify-center ">
-              <img src="./img/advantage/react.png" alt="img" className="  " />
+              <img
+                src="./img/advantage/react.png"
+                alt="img"
+                className=" bg-transparent "
+              />
             </div>
             <p className="flex justify-center font-medium mt-[10px]">ReactJS</p>
           </div>
@@ -23,7 +27,7 @@ export default function Advantage() {
               <img
                 src="./img/advantage/tailwind.png"
                 alt="img"
-                className="  "
+                className="bg-transparent  "
               />
             </div>
             <p className="flex justify-center font-medium mt-[10px]">

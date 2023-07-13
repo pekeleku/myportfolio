@@ -1,12 +1,9 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-export default function Projects(prop) {
+export default function Projects() {
   return (
     <Fade top>
-      <section
-        className="container mt-[100px] font-poppins"
-        ref={prop.refProject}
-      >
+      <section className="container mt-[100px] font-poppins" id="portfolio">
         <p className="text-black font-bold text-xl">My Projects</p>
         <div className="flex flex-col md:flex-row">
           <div className="w-full h-full my-8 hover:card transition duration-150 hover:translate-y-5   ">

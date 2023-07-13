@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-
-export default function Header(prop) {
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { handleScroll } from "./useScroll";
+export default function Header() {
   const [hamburger, setHamburger] = useState("hamburger");
   const [hamburger_line, setHamburgerLine] = useState("hamburger-line");
   const [ismenuClicked, setMenuClicked] = useState(false);
   const [isnav, setNav] = useState("#nav-menu hidden");
   const [fixednav, setFixednav] = useState(false);
-
-  // toogle hamburger menu change
 
   const updateMenu = () => {
     if (!ismenuClicked) {
@@ -30,12 +29,6 @@ export default function Header(prop) {
   };
   window.addEventListener("scroll", navfixed);
 
-  function showMostPicked() {
-    window.scrollTo({
-      top: prop.refProject.current.offsetTop - 30,
-      behavior: "smooth",
-    });
-  }
   return (
     <header
       className={
@@ -71,13 +64,12 @@ export default function Header(prop) {
             >
               <ul className="block lg:flex">
                 <li className="group">
-                  <a
-                    href="/"
+                  <Link
+                    to="#portfolio"
                     className="text-base font-semibold text-dark py-2 flex justify-center group-hover:text-primary"
-                    onClick={showMostPicked}
                   >
                     Portfolio
-                  </a>
+                  </Link>
                 </li>
                 <li className="group">
                   <a
@@ -90,13 +82,7 @@ export default function Header(prop) {
               </ul>
             </nav>
           </div>
-          <div className="w-[50px] h-[50px] py-2">
-            <img
-              src="./img/icon/favicon.ico"
-              alt="logo"
-              className="flex w-full h-full object-cover"
-            />
-          </div>
+
           <div className="flex">
             <a
               href="https://www.linkedin.com/in/walter-aluman/"
