@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { handleScroll } from "./useScroll";
-import { scrollto } from "./utils/scroll";
+
+import { scrollto } from "../utils/scroll";
 export default function Header() {
   const [hamburger, setHamburger] = useState("hamburger");
   const [hamburger_line, setHamburgerLine] = useState("hamburger-line");

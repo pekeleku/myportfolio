@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-
+import ButtonEmail from "../components/ButtonEmail";
 export default function Hero() {
   return (
     <section className="container lg:mt-[100px]" id="me">
@@ -12,9 +12,10 @@ export default function Hero() {
           <p className="text-secondary text-[25px] font-light md:font-normal mb-[50px]">
             Frontend Developer
           </p>
-          <div className=" flex w-[165px] h-[60px] bg-btn  rounded-2xl  justify-center items-center text-white  font-semibold my-6  lg:my-[50px]  ">
-            Hire me
-          </div>
+          <ButtonEmail
+            subject={"Hire Me"}
+            mailto={"mailto:alumanwalter@gmail.com"}
+          />
           {/* awal sosmed  */}
           <div className="flex flex-row items-center">
             <div className=" flex  w-[53px] h-[53px] mr-[45px]">
