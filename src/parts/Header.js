@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { handleScroll } from "./useScroll";
+import { scrollto } from "./utils/scroll";
 export default function Header() {
   const [hamburger, setHamburger] = useState("hamburger");
   const [hamburger_line, setHamburgerLine] = useState("hamburger-line");
@@ -65,19 +66,27 @@ export default function Header() {
               <ul className="block lg:flex">
                 <li className="group">
                   <Link
-                    to="#portfolio"
+                    onClick={() => scrollto("portfolio")}
                     className="text-base font-semibold text-dark py-2 flex justify-center group-hover:text-primary"
                   >
-                    Portfolio
+                    Projects
                   </Link>
                 </li>
                 <li className="group">
-                  <a
-                    href="/"
+                  <Link
+                    onClick={() => scrollto("advantage")}
+                    className="text-base font-semibold text-dark py-2 mx-8 flex justify-center group-hover:text-primary"
+                  >
+                    Skills
+                  </Link>
+                </li>
+                <li className="group">
+                  <Link
+                    onClick={() => scrollto("me")}
                     className="text-base font-semibold text-dark py-2 mx-8 flex justify-center group-hover:text-primary"
                   >
                     About Me
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

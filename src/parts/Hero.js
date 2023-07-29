@@ -4,15 +4,14 @@ import Fade from "react-reveal/Fade";
 export default function Hero() {
   return (
     <Fade top>
-      <section className="container lg:mt-[100px]">
+      <section className="container lg:mt-[100px]" id="me">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="order-last md:order-first">
             <p className="text-black font-bold lg:text-[80px]  text-3xl leading-none lg:leading-[80px] mb-[8px]">
               Hai i'm Walter B.G Aluman
             </p>
             <p className="text-secondary text-[25px] font-light md:font-normal mb-[50px]">
-              i am web developer, for now I am more focused on the front-end but
-              do not rule out the back-end work
+              Frontend Developer
             </p>
             <div className=" flex w-[165px] h-[60px] bg-btn  rounded-2xl  justify-center items-center text-white  font-semibold my-6  lg:my-[50px]  ">
               Hire me
@@ -78,7 +77,7 @@ export default function Hero() {
           <div className="flex md:w-1/2 my-[15px] items-center">
             <div className="flex-5 w-[556px] h-auto md:h-[446px]  ">
               <img
-                src="./img/fix.JPG"
+                src="./img/profile.jpg"
                 alt="walter"
                 className="w-full  h-auto lg:h-full rounded-2xl"
               />
@@ -94,7 +93,7 @@ export default function Hero() {
               <div className="absolute -left-[50px] top-8">
                 <div className="flex items-center w-full justify-center h-[28px] bg-primary p-3 md:p-5 rounded-md md:hidden lg:flex">
                   <p className="text-xs md:text-base font-medium text-black">
-                    Fresh Graduate
+                    WRF/WFH
                   </p>
                 </div>
               </div>
