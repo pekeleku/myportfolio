@@ -65,20 +65,22 @@ export default function Projects() {
 
           <a
             className="font-medium mt-2 p-2 hover:text-primary"
-            href="https://company-orcin.vercel.app/"
+            href="https://stret.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Company
+            Store Gaming
           </a>
 
-          <div className="relative ">
+          <div className="relative">
             <p className="text-secondary font-light text-sm flex p-2">
-              simple landing page
+              front end use NextJs
             </p>
-
-            <p className="text-secondary text-sm flex  mt-2 lg:mt-0 font-light p-2">
-              ccs use Sass & bootsrap
+            <p className="text-secondary font-light text-sm absolute right-0 top-6 p-2">
+              back end use expressJs
+            </p>
+            <p className="text-secondary text-sm  mt-2 lg:mt-0  flex font-light p-2">
+              ccs use Module Css
             </p>
           </div>
         </div>
