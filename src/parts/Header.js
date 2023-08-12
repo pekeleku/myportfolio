@@ -66,6 +66,7 @@ export default function Header() {
               <ul className="block lg:flex">
                 <li className="group">
                   <Link
+                    to="#"
                     onClick={() => scrollto("portfolio")}
                     className="text-base font-semibold text-dark py-2 flex justify-center group-hover:text-primary"
                   >
@@ -74,6 +75,7 @@ export default function Header() {
                 </li>
                 <li className="group">
                   <Link
+                    to="#"
                     onClick={() => scrollto("advantage")}
                     className="text-base font-semibold text-dark py-2 mx-8 flex justify-center group-hover:text-primary"
                   >
@@ -82,6 +84,7 @@ export default function Header() {
                 </li>
                 <li className="group">
                   <Link
+                    to="#"
                     onClick={() => scrollto("me")}
                     className="text-base font-semibold text-dark py-2 mx-8 flex justify-center group-hover:text-primary"
                   >
@@ -97,7 +100,7 @@ export default function Header() {
               href="https://www.linkedin.com/in/walter-aluman/"
               className="flex items-center justify-center w-auto h-auto md:w-[135px] md:h-[42px] font-medium bg-secondary p-3 rounded-[15px] hover:shadow-md  transform-none"
             >
-              Contact Me
+              Find Me
             </a>
           </div>
         </div>

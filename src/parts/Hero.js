@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 import ButtonEmail from "../components/ButtonEmail";
+import Sosmed from "./Sosmed";
 export default function Hero() {
   return (
     <section className="container lg:mt-[100px]" id="me">
@@ -16,64 +17,9 @@ export default function Hero() {
             subject={"Hire Me"}
             mailto={"mailto:alumanwalter@gmail.com"}
           />
-          {/* awal sosmed  */}
-          <div className="flex flex-row items-center">
-            <div className=" flex  w-[53px] h-[53px] mr-[45px]">
-              <a
-                rel="noopener noreferrer"
-                href="https://github.com/pekeleku"
-                target="_blank"
-              >
-                <img
-                  alt="img"
-                  className=" w-full h-full  "
-                  src="./img/link/github.png"
-                />
-              </a>
-            </div>
-            <div className="mr-[45px] w-[53px] h-[53px]">
-              <a
-                rel="noopener noreferrer"
-                href="https://glints.com/id/profile"
-                target="_blank"
-              >
-                <img
-                  alt="img"
-                  className="w-full h-full"
-                  src="./img/link/glints.png"
-                />
-              </a>
-            </div>
-            <div className="mr-[45px] w-[53px] h-[53px]">
-              <a
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/walter-aluman/"
-                target="_blank"
-              >
-                <img
-                  alt="img"
-                  className="w-full h-full"
-                  src="./img/link/linkin.png"
-                />
-              </a>
-            </div>
-            <div className="mr-[45px] w-[53px] h-[53px]">
-              <a
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/wollly__/?next=%2F"
-                target="_blank"
-              >
-                <img
-                  alt="img"
-                  className="w-full h-full"
-                  src="./img/link/ig.png"
-                />
-              </a>
-            </div>
-          </div>
-          {/* akhir sosmed  */}
-        </div>
 
+          <Sosmed />
+        </div>
         <div className="flex md:w-1/2 my-[15px] items-center">
           <div className="flex-5 w-[556px] h-auto md:h-[446px]  ">
             <img
