@@ -3,7 +3,7 @@ import React from "react";
 export default function Sosmed() {
   return (
     <div className="flex flex-row items-center">
-      <div className=" flex  w-[53px] h-[53px] mr-[45px]">
+      <div className=" flex  w-[53px] h-[53px] mr-[45px] sm:w-auto sm:h-auto">
         <a
           rel="noopener noreferrer"
           href="https://github.com/pekeleku"
@@ -16,7 +16,7 @@ export default function Sosmed() {
           />
         </a>
       </div>
-      <div className="mr-[45px] w-[53px] h-[53px]">
+      <div className="mr-[45px] w-[53px] h-[53px] sm:w-auto sm:h-auto   ">
         <a
           rel="noopener noreferrer"
           href="https://glints.com/id/profile"
@@ -29,7 +29,7 @@ export default function Sosmed() {
           />
         </a>
       </div>
-      <div className="mr-[45px] w-[53px] h-[53px]">
+      <div className="mr-[45px] w-[53px] h-[53px] sm:w-auto sm:h-auto">
         <a
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/walter-aluman/"
@@ -42,7 +42,7 @@ export default function Sosmed() {
           />
         </a>
       </div>
-      <div className="mr-[45px] w-[53px] h-[53px]">
+      <div className="mr-[45px] w-[53px] h-[53px] sm:w-auto sm:h-auto">
         <a
           rel="noopener noreferrer"
           href="https://www.instagram.com/wollly__/?next=%2F"
