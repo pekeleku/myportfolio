@@ -6,8 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 const CustomSlider = ({ children, settings = {} }) => {
   const defaultSettings = {
     dots: false,
-    infinite: false,
-    speed: 100,
+    infinite: true,
+    centerMode: true,
+
+    speed: 700,
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -24,21 +26,31 @@ const CustomSlider = ({ children, settings = {} }) => {
         },
       },
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 3,
+        },
+      },
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          initialSlide: 2,
         },
       },
       {
         breakpoint: 480,
         settings: {
+          centerMode: true,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
     ],
-    ...settings, // override default if needed
+    ...settings,
   };
 
   return <Slider {...defaultSettings}>{children}</Slider>;
