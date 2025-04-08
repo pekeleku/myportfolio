@@ -5,11 +5,13 @@ import "./mystyle.css";
 import "./style.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Analytics } from "@vercel/analytics/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <App />
+    <Analytics />
   </BrowserRouter>
 );
 
