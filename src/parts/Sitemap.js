@@ -1,111 +1,109 @@
 import React from "react";
+import { scrollto } from "../utils/scroll";
+import { IconButton } from "../components/reusable/Button";
+import { GitHubIcon, LinkedInIcon, InstagramIcon, MailIcon, LocationIcon } from "../components/reusable/Icons";
 
 export default function Sitemap() {
   return (
-    <section id="aside-menu" className="mt-[100px]">
-      <div className="">
-        <div className="container">
-          <div className="flex flex-wrap">
-            <div className="w-full lg:w-3/12 pt-9 lg:px-2">
-              <h5 className="text-[30px] font-medium text-primary pb-[25px]">
-                My<span className="text-black">Portfolio</span>
-              </h5>
-            </div>
+    <section id="me" className="py-24 relative">
+      <div className="gradient-divider mb-16"></div>
 
-            <div className="w-6/12 lg:w-3/12 pt-12 lg:px-2">
-              <h5 className="text-lg font-bold text-primary">About Me</h5>
-              <ul className="pt-3 lg:pt-[25px]">
-                <li className="pb-[15px]">
-                  <button
-                    type="link"
-                    href="/"
-                    className="text-base font-light text-secondary hover:underline"
-                  >
-                    alumanwalter@gmail.com
-                  </button>
-                </li>
-                <li className="pb-[15px]">
-                  <button
-                    type="link"
-                    href="/"
-                    className="text-base font-light text-secondary hover:underline"
-                  >
-                    Privacy & Policy
-                  </button>
-                </li>
-              </ul>
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {/* Brand Column */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-red-700 to-red-900 flex items-center justify-center font-bold text-white text-lg">
+                W
+              </div>
+              <span className="text-xl font-bold">
+                <span className="gradient-text">My</span>
+                <span className="text-gray-900 dark:text-white">Portfolio</span>
+              </span>
             </div>
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+              Frontend developer passionate about creating beautiful,
+              performant web applications that make a difference.
+            </p>
+          </div>
 
-            <div className="w-6/12 lg:w-3/12 pt-12 lg:px-2">
-              <h5 className="text-lg font-bold text-primary">Location</h5>
-              <ul className="pt-3 lg:pt-[25px]">
-                <li className="pb-[15px]">
-                  <button
-                    type="link"
-                    href="/"
-                    className="text-base font-light text-secondary hover:underline"
-                  >
-                    Indonesia
-                  </button>
-                </li>
-                <li className="pb-[15px]">
-                  <button
-                    type="link"
-                    href="/"
-                    className="text-base font-light text-secondary hover:underline"
-                  >
-                    East Nusa Tenggara
-                  </button>
-                </li>
-              </ul>
-            </div>
+          {/* Quick Links */}
+          <div>
+            <h5 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Quick Links</h5>
+            <ul className="space-y-4">
+              <li>
+                <button
+                  onClick={() => scrollto("portfolio")}
+                  className="text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-500 text-sm hover:translate-x-2 transform transition-all duration-300 inline-block"
+                >
+                  → Projects
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollto("advantage")}
+                  className="text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-500 text-sm hover:translate-x-2 transform transition-all duration-300 inline-block"
+                >
+                  → Skills
+                </button>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/pekeleku"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-500 text-sm hover:translate-x-2 transform transition-all duration-300 inline-block"
+                >
+                  → GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
 
-            <div className="w-6/12 lg:w-3/12 pt-12 pb-12 lg:px-2">
-              <h5 className="text-lg font-bold text-primary">Follow Me</h5>
-              <ul className="pt-3 lg:pt-[25px]">
-                <li className="pb-[15px]">
-                  <button
-                    type="link"
-                    href="/"
-                    className="text-base font-light text-secondary hover:underline"
-                  >
-                    <svg
-                      width="48"
-                      height="48"
-                      viewBox="0 0 48 48"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="48" height="48" fill="white" />
-                      <rect
-                        x="5.5"
-                        y="5.5"
-                        width="37"
-                        height="37"
-                        rx="8.5"
-                        stroke="#CF9861"
-                        strokeWidth="3"
-                      />
-                      <rect
-                        x="13.5"
-                        y="13.5"
-                        width="21"
-                        height="21"
-                        rx="10.5"
-                        stroke="#CF9861"
-                        strokeWidth="3"
-                      />
-                      <circle
-                        cx="36"
-                        cy="12"
-                        r="1.5"
-                        stroke="#CF9861"
-                        strokeWidth="3"
-                      />
-                    </svg>
-                  </button>
-                </li>
-              </ul>
+          {/* Contact */}
+          <div>
+            <h5 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Contact</h5>
+            <ul className="space-y-4">
+              <li>
+                <a
+                  href="mailto:alumanwalter@gmail.com"
+                  className="text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-500 text-sm flex items-center gap-2 transition-colors duration-300"
+                >
+                  <MailIcon className="w-4 h-4" />
+                  alumanwalter@gmail.com
+                </a>
+              </li>
+              <li>
+                <span className="text-gray-600 dark:text-gray-400 text-sm flex items-center gap-2">
+                  <LocationIcon className="w-4 h-4" />
+                  Jakarta, Indonesia
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h5 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Follow Me</h5>
+            <div className="flex gap-3">
+              <IconButton
+                href="https://github.com/pekeleku"
+                title="GitHub"
+              >
+                <GitHubIcon />
+              </IconButton>
+              <IconButton
+                href="https://www.linkedin.com/in/walter-aluman/"
+                title="LinkedIn"
+              >
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton
+                href="https://www.instagram.com/wollly__/"
+                title="Instagram"
+              >
+                <InstagramIcon />
+              </IconButton>
             </div>
           </div>
         </div>

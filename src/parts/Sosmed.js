@@ -1,56 +1,38 @@
 import React from "react";
+import { IconButton } from "../components/reusable/Button";
+import { GitHubIcon, LinkedInIcon, InstagramIcon } from "../components/reusable/Icons";
 
 export default function Sosmed() {
+  const socials = [
+    {
+      name: "GitHub",
+      url: "https://github.com/pekeleku",
+      icon: <GitHubIcon className="w-5 h-5" />
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/walter-aluman/",
+      icon: <LinkedInIcon className="w-5 h-5" />
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/wollly__/",
+      icon: <InstagramIcon className="w-5 h-5" />
+    },
+  ];
+
   return (
-    <div className="flex flex-row items-center">
-      <div className=" flex  w-[53px] h-[53px] mr-[45px] sm:w-auto sm:h-auto">
-        <a
-          rel="noopener noreferrer"
-          href="https://github.com/pekeleku"
-          target="_blank"
+    <div className="flex flex-row items-center gap-3">
+      {socials.map((social, index) => (
+        <IconButton
+          key={index}
+          href={social.url}
+          title={social.name}
+          className="w-12 h-12" // Slightly smaller for hero
         >
-          <img
-            alt="img"
-            className=" w-full h-full  "
-            src="./img/link/github.png"
-          />
-        </a>
-      </div>
-      <div className="mr-[45px] w-[53px] h-[53px] sm:w-auto sm:h-auto   ">
-        <a
-          rel="noopener noreferrer"
-          href="https://glints.com/id/profile"
-          target="_blank"
-        >
-          <img
-            alt="img"
-            className="w-full h-full"
-            src="./img/link/glints.png"
-          />
-        </a>
-      </div>
-      <div className="mr-[45px] w-[53px] h-[53px] sm:w-auto sm:h-auto">
-        <a
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/walter-aluman/"
-          target="_blank"
-        >
-          <img
-            alt="img"
-            className="w-full h-full"
-            src="./img/link/linkin.png"
-          />
-        </a>
-      </div>
-      <div className="mr-[45px] w-[53px] h-[53px] sm:w-auto sm:h-auto">
-        <a
-          rel="noopener noreferrer"
-          href="https://www.instagram.com/wollly__/?next=%2F"
-          target="_blank"
-        >
-          <img alt="img" className="w-full h-full" src="./img/link/ig.png" />
-        </a>
-      </div>
+          {social.icon}
+        </IconButton>
+      ))}
     </div>
   );
 }
