@@ -1,79 +1,55 @@
 import React from "react";
-
-import AdvantageItem from "../components/AdvantageItem";
-import CustomSlider from "../components/reusable/CustomeSlider/CustomSlider ";
+import SectionHeader from "../components/reusable/SectionHeader";
+import SkillCard from "../components/reusable/SkillCard";
 
 export default function Advantage() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    centerMode: true,
+  const skills = [
+    { name: "ReactJS", icon: "./img/advantage/react.svg", color: "from-red-600 to-red-800" },
+    { name: "Next.js", icon: "./img/advantage/icon-nextjs.svg", color: "from-slate-600 to-slate-800" },
+    { name: "TailwindCSS", icon: "./img/advantage/tailwind.svg", color: "from-red-800 to-red-950" },
+    { name: "Figma", icon: "./img/advantage/figma.svg", color: "from-slate-700 to-slate-900" },
+    { name: "Sass", icon: "./img/advantage/sass.svg", color: "from-red-700 to-red-900" },
+    { name: "Bootstrap", icon: "./img/advantage/bootstrap.svg", color: "from-slate-500 to-slate-700" },
+  ];
 
-    speed: 700,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          initialSlide: 3,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          centerMode: true,
+  const additionalSkills = ["JavaScript", "Git", "REST APIs", "VS Code", "Jira (Agile / Scrum)"];
 
-          // fade: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
-    <section id="advantage" className="container mt-[100px] font-poppins">
-      <p className="text-black font-bold text-xl mb-2">My Super Power</p>
-      <CustomSlider>
-        <AdvantageItem title="ReactJs" pathImg="./img/advantage/react.svg" />
-        <AdvantageItem
-          width
-          title="Nextjs"
-          pathImg="./img/advantage/icon-nextjs.svg"
+    <section id="advantage" className="py-24 relative">
+      <div className="container">
+        {/* Section Header */}
+        <SectionHeader
+          badge="What I Use"
+          badgeColor="red"
+          title="My"
+          highlightedText="Super Powers"
+          subtitle="Technologies and tools I work with to bring ideas to life"
         />
-        <AdvantageItem title="Figma" pathImg="./img/advantage/figma.svg" />
-        <AdvantageItem
-          title="TailwindCss"
-          pathImg="./img/advantage/tailwind.svg"
-        />
-        <AdvantageItem title="Sass" pathImg="./img/advantage/sass.svg" />
-        <AdvantageItem
-          title="Bootstrap"
-          pathImg="./img/advantage/bootstrap.svg"
-        />
-      </CustomSlider>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {skills.map((skill, index) => (
+            <SkillCard
+              key={index}
+              name={skill.name}
+              icon={skill.icon}
+              gradientColor={skill.color}
+            />
+          ))}
+        </div>
+
+        {/* Additional Skills */}
+        <div className="mt-16 text-center">
+          <p className="text-gray-400 dark:text-gray-500 text-sm mb-4">Also experienced with</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {additionalSkills.map((skill, index) => (
+              <span key={index} className="skill-badge">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
