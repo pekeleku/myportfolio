@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { scrollto } from "../utils/scroll";
 import { useTheme } from "../context/ThemeContext";
-import { SunIcon, MoonIcon, ArrowRightIcon } from "../components/reusable/Icons";
+import { SunIcon, MoonIcon } from "../components/reusable/Icons";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,8 +27,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "navbar-fixed py-3" : "bg-transparent py-5"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "navbar-fixed py-3" : "bg-transparent py-5"
+      }`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
@@ -40,7 +41,6 @@ export default function Header() {
               </div>
               <div className="absolute -inset-1 bg-gradient-to-r from-red-700 to-red-900 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,13 +63,15 @@ export default function Header() {
               onClick={toggleTheme}
               className="theme-toggle"
               aria-label="Toggle theme"
-              title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              title={
+                isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
+              }
             >
               {isDarkMode ? <SunIcon /> : <MoonIcon />}
             </button>
 
             {/* CTA Button */}
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/walter-aluman/"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,15 +79,16 @@ export default function Header() {
             >
               <span>Let's Talk</span>
               <ArrowRightIcon className="w-4 h-4" />
-            </a>
+            </a> */}
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className={`lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl transition-all duration-300 ${isMenuOpen
+              className={`lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl transition-all duration-300 ${
+                isMenuOpen
                   ? "bg-red-500/10"
                   : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10"
-                }`}
+              }`}
               aria-label="Toggle Menu"
             >
               <div className={`${isMenuOpen ? "hamburger-active" : ""}`}>
@@ -99,8 +102,9 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
-            }`}
+          className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+            isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+          }`}
         >
           <nav className="mobile-nav rounded-2xl p-4">
             {navLinks.map((link, index) => (
@@ -136,14 +140,14 @@ export default function Header() {
               )}
             </button>
 
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/walter-aluman/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-glow w-full text-center text-sm py-3 mt-2 block"
             >
               Let's Talk
-            </a>
+            </a> */}
           </nav>
         </div>
       </div>
