@@ -10,7 +10,7 @@ export default function Projects() {
       title: "Integrated Command Center (Backoffice)",
       description:
         "A dynamic and customizable dashboard built to monitor and manage operational data in real time through a flexible interface.",
-      image: "./img/projects/p6.PNG",
+      image: "./img/projects/p6.png",
       link: "#",
       tags: ["Next.js", "TailwindCSS", "Bootstrap"],
       featured: true,
@@ -19,7 +19,7 @@ export default function Projects() {
       title: "Integrated Command Center (Dashboard)",
       description:
         "Real-time control and monitoring with a comprehensive and accurate dashboard.",
-      image: "./img/projects/p7.PNG",
+      image: "./img/projects/p7.png",
       link: "#",
       tags: ["Next.js", "TailwindCSS", "Bootstrap"],
       featured: true,
@@ -28,7 +28,7 @@ export default function Projects() {
       title: "Prodia",
       description:
         "An internal CMS designed to manage company content with role-based access and structured data flow.",
-      image: "./img/projects/p8.PNG",
+      image: "./img/projects/p8.png",
       link: "#",
       tags: ["Next.js", "TailwindCSS"],
       featured: true,
