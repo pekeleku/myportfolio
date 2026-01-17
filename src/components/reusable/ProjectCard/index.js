@@ -7,14 +7,16 @@ export default function ProjectCard({
     image,
     link,
     tags = [],
-    featured = false
+    featured = false,
+    isPrivate = false
 }) {
+    const Wrapper = isPrivate ? 'div' : 'a';
+    const wrapperProps = isPrivate ? {} : { href: link, target: "_blank", rel: "noopener noreferrer" };
+
     return (
-        <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`project-card group ${featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
+        <Wrapper
+            {...wrapperProps}
+            className={`project-card group ${featured ? 'md:col-span-2 lg:col-span-1' : ''} ${isPrivate ? 'cursor-default' : 'cursor-pointer'}`}
         >
             {/* Image Container */}
             <div className="relative overflow-hidden rounded-t-3xl">
@@ -25,13 +27,22 @@ export default function ProjectCard({
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className={`absolute inset-0 bg-gradient-to-t ${isPrivate ? 'from-black/90 via-black/40' : 'from-black/80 via-black/20'} to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300`}></div>
 
-                {/* View Project Button */}
+                {/* View Project Button / Private Label */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
-                    <span className="btn-glow text-sm px-6 py-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                        View Project
-                    </span>
+                    {isPrivate ? (
+                        <div className="px-5 py-2.5 rounded-full bg-black/60 border border-red-900/30 backdrop-blur-md transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
+                            <span className="flex items-center gap-2 text-red-200/90 text-sm font-medium tracking-wide">
+                                <span className="w-1.5 h-1.5 rounded-full bg-red-800/80 shadow-[0_0_8px_rgba(185,28,28,0.5)]"></span>
+                                Private Project
+                            </span>
+                        </div>
+                    ) : (
+                        <span className="btn-glow text-sm px-6 py-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            View Project
+                        </span>
+                    )}
                 </div>
 
                 {/* Featured Badge */}
@@ -44,7 +55,7 @@ export default function ProjectCard({
 
             {/* Content */}
             <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-red-700 dark:group-hover:text-red-500 transition-colors duration-300">
+                <h3 className={`text-xl font-bold text-gray-900 dark:text-white mb-2 ${!isPrivate && 'group-hover:text-red-700 dark:group-hover:text-red-500'} transition-colors duration-300`}>
                     {title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
@@ -64,7 +75,7 @@ export default function ProjectCard({
             </div>
 
             {/* Bottom Border Glow */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-700 via-red-800 to-red-950 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-3xl"></div>
-        </a>
+            <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${isPrivate ? 'from-red-900/40 via-red-900/20 to-transparent' : 'from-red-700 via-red-800 to-red-950'} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-3xl`}></div>
+        </Wrapper>
     );
 }

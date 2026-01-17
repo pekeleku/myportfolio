@@ -7,20 +7,49 @@ import { ExternalLinkIcon } from "../components/reusable/Icons";
 export default function Projects() {
   const projects = [
     {
+      title: "Integrated Command Center (Backoffice)",
+      description:
+        "A dynamic and customizable dashboard built to monitor and manage operational data in real time through a flexible interface.",
+      image: "./img/projects/p6.PNG",
+      link: "#",
+      tags: ["Next.js", "TailwindCSS", "Bootstrap"],
+      featured: true,
+    },
+    {
+      title: "Integrated Command Center (Dashboard)",
+      description:
+        "Real-time control and monitoring with a comprehensive and accurate dashboard.",
+      image: "./img/projects/p7.PNG",
+      link: "#",
+      tags: ["Next.js", "TailwindCSS", "Bootstrap"],
+      featured: true,
+    },
+    {
+      title: "Prodia",
+      description:
+        "An internal CMS designed to manage company content with role-based access and structured data flow.",
+      image: "./img/projects/p8.PNG",
+      link: "#",
+      tags: ["Next.js", "TailwindCSS"],
+      featured: true,
+    },
+    {
       title: "Luxspace",
-      description: "Premium furniture e-commerce platform with cart system and product catalog",
+      description:
+        "Premium furniture e-commerce platform with cart system and product catalog",
       image: "./img/projects/p1.JPG",
       link: "https://luxspace-pwa-mu.vercel.app/",
       tags: ["React.js", "Express.js", "TailwindCSS"],
-      featured: true
+      featured: false,
     },
     {
       title: "Lacaza Coffee",
-      description: "Coffee ordering application with menu management and order tracking",
+      description:
+        "Coffee ordering application with menu management and order tracking",
       image: "./img/projects/p2.PNG",
       link: "https://lacazacoffe.vercel.app/",
       tags: ["React.js", "Express.js", "TailwindCSS"],
-      featured: false
+      featured: false,
     },
     {
       title: "Store Gaming",
@@ -28,8 +57,8 @@ export default function Projects() {
       image: "./img/projects/p3.JPG",
       link: "https://stret.vercel.app/",
       tags: ["Next.js", "Express.js", "CSS Modules"],
-      featured: false
-    }
+      featured: false,
+    },
   ];
 
   return (
@@ -55,6 +84,7 @@ export default function Projects() {
               link={project.link}
               tags={project.tags}
               featured={project.featured}
+              isPrivate={index < projects.length - 3}
             />
           ))}
         </div>
@@ -62,7 +92,7 @@ export default function Projects() {
         {/* View All Button */}
         <div className="text-center mt-12">
           <OutlineButton href="https://github.com/pekeleku">
-            <span>View All on GitHub</span>
+            <span>View Public Projects on GitHub</span>
             <ExternalLinkIcon className="w-5 h-5" />
           </OutlineButton>
         </div>
