@@ -69,7 +69,7 @@ export default function Header() {
             </button>
 
             {/* CTA Button */}
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/walter-aluman/"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,14 +77,14 @@ export default function Header() {
             >
               <span>Let's Talk</span>
               <ArrowRightIcon className="w-4 h-4" />
-            </a>
+            </a> */}
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className={`lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl transition-all duration-300 ${isMenuOpen
-                  ? "bg-red-500/10"
-                  : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10"
+                ? "bg-red-500/10"
+                : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10"
                 }`}
               aria-label="Toggle Menu"
             >
@@ -136,14 +136,14 @@ export default function Header() {
               )}
             </button>
 
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/walter-aluman/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-glow w-full text-center text-sm py-3 mt-2 block"
             >
               Let's Talk
-            </a>
+            </a> */}
           </nav>
         </div>
       </div>
