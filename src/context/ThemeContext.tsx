@@ -1,23 +1,28 @@
+"use client";
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-const ThemeContext = createContext();
+const ThemeContext = createContext<{
+  isDarkMode: boolean;
+  toggleTheme: () => void;
+  mounted: boolean;
+} | undefined>(undefined);
 
 export function ThemeProvider({ children }) {
-    // Determine initial state: 
-    // 1. Check localStorage ('theme' key)
-    // 2. Fallback to OS preference
-    const [theme, setTheme] = useState(() => {
-        if (typeof window !== 'undefined') {
-            const saved = localStorage.getItem('theme');
-            if (saved) return saved;
-
-            const mql = window.matchMedia('(prefers-color-scheme: dark)');
-            return mql.matches ? 'dark' : 'light';
-        }
-        return 'light'; // Default for SSR
-    });
+    const [theme, setTheme] = useState('light');
+    const [mounted, setMounted] = useState(false);
 
     const isDarkMode = theme === 'dark';
+
+    // Sync theme from localStorage on mount (avoids hydration mismatch)
+    useEffect(() => {
+        const saved = localStorage.getItem('theme');
+        if (saved) {
+            setTheme(saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+        }
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         const root = window.document.documentElement;
@@ -53,7 +58,7 @@ export function ThemeProvider({ children }) {
     };
 
     return (
-        <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+        <ThemeContext.Provider value={{ isDarkMode, toggleTheme, mounted }}>
             {children}
         </ThemeContext.Provider>
     );

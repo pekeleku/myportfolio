@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 dark:text-gray-500 text-sm">
-            © {currentYear} Walter B.G Aluman. Crafted with  React
+            © {currentYear} Walter B.G Aluman. Crafted with Next.js
           </p>
           <div className="flex items-center gap-6">
             <button className="text-gray-500 dark:text-gray-500 text-sm hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">

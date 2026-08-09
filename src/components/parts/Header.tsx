@@ -1,13 +1,14 @@
+"use client";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { scrollto } from "../utils/scroll";
-import { useTheme } from "../context/ThemeContext";
-import { SunIcon, MoonIcon } from "../components/reusable/Icons";
+import Link from "next/link";
+import { scrollto } from "@/utils/scroll";
+import { useTheme } from "@/context/ThemeContext";
+import { SunIcon, MoonIcon } from "@/components/reusable/Icons";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { isDarkMode, toggleTheme } = useTheme();
+  const { isDarkMode, toggleTheme, mounted } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +35,7 @@ export default function Header() {
       <div className="container">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group">
             <div className="relative">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-red-700 to-red-900 flex items-center justify-center font-bold text-white text-lg group-hover:scale-110 transition-transform duration-300">
                 W
@@ -63,11 +64,9 @@ export default function Header() {
               onClick={toggleTheme}
               className="theme-toggle"
               aria-label="Toggle theme"
-              title={
-                isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
-              }
+              title={mounted ? (isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode") : "Toggle theme"}
             >
-              {isDarkMode ? <SunIcon /> : <MoonIcon />}
+              {mounted ? (isDarkMode ? <SunIcon /> : <MoonIcon />) : <span className="w-5 h-5" />}
             </button>
 
             {/* CTA Button */}
@@ -127,7 +126,7 @@ export default function Header() {
               onClick={toggleTheme}
               className="w-full text-left py-3 px-4 text-gray-600 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-500 rounded-xl transition-all duration-300 flex items-center gap-3"
             >
-              {isDarkMode ? (
+              {mounted ? (isDarkMode ? (
                 <>
                   <SunIcon className="w-5 h-5" />
                   <span>Light Mode</span>
@@ -137,6 +136,8 @@ export default function Header() {
                   <MoonIcon className="w-5 h-5" />
                   <span>Dark Mode</span>
                 </>
+              )) : (
+                <span className="w-5 h-5" />
               )}
             </button>
 
