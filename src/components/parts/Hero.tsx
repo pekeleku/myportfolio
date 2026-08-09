@@ -1,9 +1,10 @@
+"use client";
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useEffect, useState, useMemo } from "react";
-import { GlowButton, OutlineButton } from "../components/reusable/Button";
-import GlassCard from "../components/reusable/GlassCard";
+import { GlowButton, OutlineButton } from "@/components/reusable/Button";
+import GlassCard from "@/components/reusable/GlassCard";
 import Sosmed from "./Sosmed";
-import { MailIcon, CodeIcon } from "../components/reusable/Icons";
+import { MailIcon, CodeIcon } from "@/components/reusable/Icons";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +21,7 @@ export default function Hero() {
   const experienceYears = useMemo(() => {
     const startDate = new Date(2023, 8, 14); // September 14, 2023
     const today = new Date();
-    const diffInMs = today - startDate;
+    const diffInMs = today.getTime() - startDate.getTime();
     const years = Math.floor(diffInMs / (1000 * 60 * 60 * 24 * 365.25));
     return `${years}+ Years`;
   }, []);

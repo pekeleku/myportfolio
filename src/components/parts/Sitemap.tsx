@@ -1,7 +1,7 @@
 import React from "react";
-import { scrollto } from "../utils/scroll";
-import { IconButton } from "../components/reusable/Button";
-import { GitHubIcon, LinkedInIcon, InstagramIcon, MailIcon, LocationIcon } from "../components/reusable/Icons";
+import { scrollto } from "@/utils/scroll";
+import { IconButton } from "@/components/reusable/Button";
+import { GitHubIcon, LinkedInIcon, InstagramIcon, MailIcon, LocationIcon } from "@/components/reusable/Icons";
 
 export default function Sitemap() {
   return (

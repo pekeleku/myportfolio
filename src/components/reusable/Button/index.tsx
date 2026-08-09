@@ -1,7 +1,13 @@
 import React from "react";
 
 // Primary gradient button with glow effect
-export function GlowButton({ children, href, onClick, className = "", size = "md" }) {
+export function GlowButton({ children, href, onClick, className = "", size = "md" }: {
+    children: React.ReactNode;
+    href?: string;
+    onClick?: () => void;
+    className?: string;
+    size?: string;
+}) {
     const sizeClasses = {
         sm: "px-4 py-2 text-sm",
         md: "px-6 py-3 text-base",
@@ -31,7 +37,13 @@ export function GlowButton({ children, href, onClick, className = "", size = "md
 }
 
 // Outline button with glow on hover
-export function OutlineButton({ children, href, onClick, className = "", size = "md" }) {
+export function OutlineButton({ children, href, onClick, className = "", size = "md" }: {
+    children: React.ReactNode;
+    href?: string;
+    onClick?: () => void;
+    className?: string;
+    size?: string;
+}) {
     const sizeClasses = {
         sm: "px-4 py-2 text-sm",
         md: "px-6 py-3 text-base",
@@ -61,7 +73,13 @@ export function OutlineButton({ children, href, onClick, className = "", size = 
 }
 
 // Icon button (for social links, theme toggle, etc.)
-export function IconButton({ children, href, onClick, className = "", title = "" }) {
+export function IconButton({ children, href, onClick, className = "", title = "" }: {
+    children: React.ReactNode;
+    href?: string;
+    onClick?: () => void;
+    className?: string;
+    title?: string;
+}) {
     const baseClasses = `social-link text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-500 ${className}`;
 
     if (href) {

@@ -1,6 +1,6 @@
 import React from "react";
-import { IconButton } from "../components/reusable/Button";
-import { GitHubIcon, LinkedInIcon, InstagramIcon } from "../components/reusable/Icons";
+import { IconButton } from "@/components/reusable/Button";
+import { GitHubIcon, LinkedInIcon, InstagramIcon } from "@/components/reusable/Icons";
 
 export default function Sosmed() {
   const socials = [
