@@ -588,9 +588,11 @@ body {
 }
 
 /* room for the card's hover lift inside the slider track (overflow hidden clips it otherwise).
-   Unlayered on purpose: slick.css is unlayered, so it would beat any @layer rule. */
+   Unlayered on purpose: slick.css is unlayered, so it would beat any @layer rule.
+   !important on purpose: react-slick writes inline `padding: 0 50px` on .slick-list when
+   centerMode is on (≤480px), and inline styles beat the stylesheet. */
 #advantage .slick-list {
-  padding-top: 12px;
+  padding-top: 12px !important;
 }
 
 /* Animation delays */
