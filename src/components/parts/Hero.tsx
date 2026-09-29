@@ -4,7 +4,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import { GlowButton, OutlineButton } from "@/components/reusable/Button";
 import GlassCard from "@/components/reusable/GlassCard";
 import Sosmed from "./Sosmed";
-import { MailIcon, CodeIcon } from "@/components/reusable/Icons";
+import { DownloadIcon, CodeIcon } from "@/components/reusable/Icons";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,13 +65,18 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <div
-            className={`lg:w-1/2 order-last lg:order-first transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-              }`}
+            className={`lg:w-1/2 order-last lg:order-first transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-10"
+            }`}
           >
             {/* Greeting Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/5 border border-red-500/10 mb-6">
               <span className="text-2xl">👋</span>
-              <span className="text-red-700 dark:text-red-500 font-medium">Hello, I'm</span>
+              <span className="text-red-700 dark:text-red-500 font-medium">
+                Hello, I'm
+              </span>
             </div>
 
             {/* Name */}
@@ -90,25 +95,31 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-gray-600 dark:text-gray-400 text-lg max-w-lg mb-8 leading-relaxed">
-              Building performant web applications with a strong focus on clean architecture and maintainable code.
+              Building performant web applications with a strong focus on clean
+              architecture and maintainable code.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-10">
-              <GlowButton href="mailto:alumanwalter@gmail.com">
-                <MailIcon className="w-5 h-5" />
-                <span>Hire Me</span>
+              <GlowButton
+                href="/docs/cv_walter_aluman.pdf"
+                download="Walter Aluman.pdf"
+              >
+                <DownloadIcon className="w-5 h-5" />
+                <span>Download CV</span>
               </GlowButton>
-              <OutlineButton
+              {/* <OutlineButton
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View Projects
-              </OutlineButton>
+              </OutlineButton> */}
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              <span className="text-gray-400 dark:text-gray-500 text-sm">Follow me</span>
+              <span className="text-gray-400 dark:text-gray-500 text-sm">
+                Follow me
+              </span>
               <div className="h-px flex-1 max-w-[60px] bg-gradient-to-r from-gray-400 dark:from-gray-600 to-transparent"></div>
               <Sosmed />
             </div>
@@ -116,8 +127,11 @@ export default function Hero() {
 
           {/* Profile Image */}
           <div
-            className={`lg:w-1/2 flex justify-center lg:justify-end transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-              }`}
+            className={`lg:w-1/2 flex justify-center lg:justify-end transition-all duration-1000 delay-300 ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-10"
+            }`}
           >
             <div className="relative">
               {/* Glow Effect */}
@@ -136,7 +150,9 @@ export default function Hero() {
                 {/* Floating Tags */}
                 <GlassCard className="absolute -left-6 top-8 px-4 py-3 flex items-center gap-2 fade-in-left delay-500">
                   <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                  <span className="text-gray-900 dark:text-white text-sm font-medium">WFH/WFO</span>
+                  <span className="text-gray-900 dark:text-white text-sm font-medium">
+                    WFH/WFO
+                  </span>
                 </GlassCard>
 
                 <GlassCard className="absolute -right-4 bottom-20 px-4 py-3 fade-in-right delay-700">
@@ -145,8 +161,12 @@ export default function Hero() {
                       <CodeIcon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-gray-900 dark:text-white text-sm font-semibold">{experienceYears}</p>
-                      <p className="text-gray-500 dark:text-gray-400 text-xs">Experience</p>
+                      <p className="text-gray-900 dark:text-white text-sm font-semibold">
+                        {experienceYears}
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 text-xs">
+                        Experience
+                      </p>
                     </div>
                   </div>
                 </GlassCard>
@@ -154,7 +174,9 @@ export default function Hero() {
                 <GlassCard className="absolute -left-8 bottom-8 px-4 py-3 fade-in-left delay-900">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">⚛️</span>
-                    <span className="text-gray-900 dark:text-white text-sm font-medium">React/Next.js</span>
+                    <span className="text-gray-900 dark:text-white text-sm font-medium">
+                      React/Next.js
+                    </span>
                   </div>
                 </GlassCard>
               </div>
@@ -164,7 +186,9 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden lg:flex flex-col items-center gap-2">
-          <span className="text-gray-400 dark:text-gray-500 text-sm">Scroll Down</span>
+          <span className="text-gray-400 dark:text-gray-500 text-sm">
+            Scroll Down
+          </span>
           <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center p-2">
             <div className="w-1.5 h-1.5 bg-red-700 rounded-full animate-bounce"></div>
           </div>

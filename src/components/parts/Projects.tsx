@@ -25,7 +25,7 @@ export default function Projects() {
         "Real-time control and monitoring with a comprehensive and accurate dashboard.",
       image: "./img/projects/p7.png",
       link: "#",
-      tags: ["Next.js", "TailwindCSS", "Bootstrap"],
+      tags: ["Next.js", "TailwindCSS", "Bootstrap", "ZoneMinder"],
       featured: true,
     },
     {
@@ -43,7 +43,13 @@ export default function Projects() {
         "Interactive Learning Management System for Garuda Indonesia, delivering engaging and interactive learning experiences.",
       image: "./img/projects/p9.png",
       link: "#",
-      tags: ["Next.js", "TailwindCSS", "shadcn/ui", "TypeScript", "TanStack Query"],
+      tags: [
+        "Next.js",
+        "TailwindCSS",
+        "shadcn/ui",
+        "TypeScript",
+        "TanStack Query",
+      ],
       featured: false,
     },
     {
@@ -53,6 +59,21 @@ export default function Projects() {
       image: "./img/projects/p10.png",
       link: "#",
       tags: ["Next.js", "TailwindCSS", "Bootstrap", "TanStack Query"],
+      featured: false,
+    },
+    {
+      title: "UPK Bangka Belitung - Smart VMS & Surveillance",
+      description:
+        "An enterprise backoffice integrating Visitor Management (VMS), Access Control (ACS), and AI-powered Surveillance (Face & License Plate Recognition) with real-time ZoneMinder CCTV streaming and local/public network routing.",
+      image: "./img/projects/p11.png",
+      link: "#",
+      tags: [
+        "Next.js",
+        "TanStack Query",
+        "Socket.io",
+        "TailwindCSS",
+        "ZoneMinder",
+      ],
       featured: false,
     },
   ];
@@ -91,7 +112,8 @@ export default function Projects() {
     { key: "personal", label: "Personal" },
   ];
 
-  const projects = activeTab === "professional" ? professionalProjects : personalProjects;
+  const projects =
+    activeTab === "professional" ? professionalProjects : personalProjects;
   const isPrivate = activeTab === "professional";
 
   return (
@@ -142,15 +164,6 @@ export default function Projects() {
               />
             ))}
           </div>
-
-          {/* Coming Soon - only in Professional tab */}
-          {activeTab === "professional" && (
-            <div className="text-center mt-12">
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
-                Other professional projects will be displayed soon.
-              </p>
-            </div>
-          )}
 
           {/* View All Button - only in Personal tab */}
           {activeTab === "personal" && (

@@ -1,12 +1,13 @@
 import React from "react";
 
 // Primary gradient button with glow effect
-export function GlowButton({ children, href, onClick, className = "", size = "md" }: {
+export function GlowButton({ children, href, onClick, className = "", size = "md", download }: {
     children: React.ReactNode;
     href?: string;
     onClick?: () => void;
     className?: string;
     size?: string;
+    download?: boolean | string;
 }) {
     const sizeClasses = {
         sm: "px-4 py-2 text-sm",
@@ -22,6 +23,7 @@ export function GlowButton({ children, href, onClick, className = "", size = "md
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
+                download={download}
                 className={baseClasses}
             >
                 {children}
@@ -37,12 +39,13 @@ export function GlowButton({ children, href, onClick, className = "", size = "md
 }
 
 // Outline button with glow on hover
-export function OutlineButton({ children, href, onClick, className = "", size = "md" }: {
+export function OutlineButton({ children, href, onClick, className = "", size = "md", download }: {
     children: React.ReactNode;
     href?: string;
     onClick?: () => void;
     className?: string;
     size?: string;
+    download?: boolean | string;
 }) {
     const sizeClasses = {
         sm: "px-4 py-2 text-sm",
@@ -58,6 +61,7 @@ export function OutlineButton({ children, href, onClick, className = "", size = 
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
+                download={download}
                 className={baseClasses}
             >
                 {children}
